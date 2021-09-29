@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.6"
+  - "3.9.0"
 
 services:
   - docker
@@ -8,4 +8,4 @@ services:
 befoure_script: pip install docker-compose
 
 script:
-  - docker-copmose run app sh -c "python manage.py test && flake8"
+  - docker-compose run app sh -c "python manage.py test && flake8"

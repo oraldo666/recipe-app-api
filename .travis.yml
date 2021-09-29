@@ -1,0 +1,11 @@
+language: python
+python:
+  -"3.9.0"
+
+services:
+  - docker
+
+befoure_script: pip install docker-compose
+
+script:
+  -docker-copmose run app sh -c "python manage.py test && flake8"
